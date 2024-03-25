@@ -28,12 +28,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool isLoading = true;
+  final konstanta = 'hello world';
 
-  void jalankan() {
-    isLoading = !isLoading;
-    setState(() {});
-  }
+  void jalankan() {}
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (isLoading == true)
-              CircularProgressIndicator(
-                color: Colors.red,
-              )
-            else
-              Container(),
+            Text('${konstanta}'),
             ElevatedButton(
               onPressed: () {
                 jalankan();
