@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink.shade900),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 17, 135, 51)),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -28,10 +29,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool isLoading = true;
+  var text = 'hello world';
 
   void jalankan() {
-    isLoading = !isLoading;
+    text = 'kami kelompok 3';
     setState(() {});
   }
 
@@ -42,12 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (isLoading == true)
-              CircularProgressIndicator(
-                color: Colors.red,
-              )
-            else
-              Container(),
+            Text('${text}'),
             ElevatedButton(
               onPressed: () {
                 jalankan();
