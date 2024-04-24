@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 jalankan();
               },
-              child: Text('Pecik Aku >.<'),
+              child: Text('Click disini!'),
             )
           ],
         ),
